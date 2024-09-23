@@ -29,7 +29,7 @@ export default function RootLayout({
       >
         <Menu op1="Home" op2="Carrinho"/>
         {children}
-        <Form/>
+        <Form email="user@email.com" password="123"/>
         <Footer op1="📞" op2="📩"/>
       </body>
     </html>
