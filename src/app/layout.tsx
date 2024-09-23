@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${karlaFont.variable} antialiased`}
+        className={`${karlaFont.variable} antialiased min-h-screen flex flex-col justify-between`}
       >
         <Menu op1="Home" op2="Carrinho"/>
         {children}

@@ -6,7 +6,7 @@ interface ILogin{
 export const Form = ({ email, password }: ILogin) => {
     return(
         <>
-        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div className="flex flex-col align-items-center">
             <div className="sm:col-span-4">
                 <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900"></label>
                 <div className="mt-2">
