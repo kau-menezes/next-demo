@@ -9,13 +9,8 @@ interface IFooter{
 export const Footer = ({ op1, op2 }: IFooter) => {
     return(
         <>
-        <div>
-        <p>No rights reserved, this is just a study!</p>
-        <p>Contacts</p>
-            <footer className="flex flex-row gap-x-5">
-            <p>{op1}</p>
-            <p>{op2}</p>
-            </footer>
+        <div className="bg-neutral-400 flex flex-col items-center text-white p-2">
+            <b>No rights reserved, this is just a study!</b>
         </div>
         </>
     )

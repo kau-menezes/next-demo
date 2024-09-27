@@ -20,8 +20,8 @@ export const Menu = ({ op1, op2 }: IMenu) => {
     return(
         <>
         <nav className="font-semibold flex flex-row gap-x-5 bg-cyan-800 justify-center p-3 font-karlaFont">
-          <p className="font-semibold hover:cursor-pointer hover:bg-cyan-600 text-center min-w-24 py-1 px-2 text-white bg-cyan-700">{op1}</p>
-          <p className="font-semibold hover:cursor-pointer hover:bg-cyan-600 text-center min-w-24 py-1 px-2 text-slate-200 bg-cyan-700">{op2}</p>
+          <Link href="/" className="font-semibold hover:cursor-pointer hover:bg-cyan-600 text-center min-w-24 py-1 px-2 text-white bg-cyan-700">{op1}</Link>
+          <Link href="/mathmatics" className="font-semibold hover:cursor-pointer hover:bg-cyan-600 text-center min-w-24 py-1 px-2 text-slate-200 bg-cyan-700">{op2}</Link>
         </nav>
         </>
     )

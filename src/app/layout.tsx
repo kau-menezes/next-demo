@@ -6,7 +6,7 @@ import { Karla } from "next/font/google"
 import "./globals.css";
 import  {Menu}  from "@/components/menu";
 import { Footer } from "@/components/footer";
-import { Form } from "@/components/form";
+
 
 
 const karlaFont = Karla({
@@ -27,9 +27,10 @@ export default function RootLayout({
       <body
         className={`${karlaFont.variable} antialiased min-h-screen flex flex-col justify-between`}
       >
-        <Menu op1="Home" op2="Carrinho"/>
-        {children}
-        <Form email="user@email.com" password="123"/>
+        <Menu op1="Home 🏠" op2="Math 📊"/>
+        <main className="flex flex-col items-center">
+          {children}
+        </main>
         <Footer op1="📞" op2="📩"/>
       </body>
     </html>
