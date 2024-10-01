@@ -9,6 +9,10 @@ const nextConfig = {
                 {
                     source: "/mathmatics", 
                     destination: "/maths"
+                },
+                {
+                    source: "/reused-function", 
+                    destination: "/generalFunction"
                 }
             ]
         

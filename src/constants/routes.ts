@@ -1,4 +1,5 @@
 export enum ROUTES {
     home = "/",
-    maths = "mathmatics"
+    maths = "mathmatics",
+    generalFunction = "/reused-function"
 }

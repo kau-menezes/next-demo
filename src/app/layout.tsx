@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${karlaFont.variable} antialiased min-h-screen flex flex-col justify-between`}
       >
-        <Menu op1="Home 🏠" op2="Math 📊"/>
+        <Menu op1="Home 🏠" op2="Math 📊" op3="Function"/>
         <main className="flex flex-col items-center">
           {children}
         </main>

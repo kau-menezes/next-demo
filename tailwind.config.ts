@@ -11,16 +11,20 @@ const config: Config = {
       colors: {
         white: "var(--white)",
         black: "var(--black)",
+        romeu: "bg-amber-500",
       },
     }, 
+
     fontSize: {
         large: "36px", 
         medium: "24px", 
         small: "16px",
     }, 
+
     fontFamily: {
         karlaFont: "var(--karlaFont)",
-    },
+    }
+
   },
   plugins: [],
 };
