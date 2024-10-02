@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer";
 
 
 const karlaFont = Karla({
-  weight: ["200", "400", "800"],
+  weight: ["200","300", "400", "500", "800"],
   style: "normal",
   variable: "--karlaFont",
   subsets: ["latin"],
@@ -25,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${karlaFont.variable} antialiased min-h-screen flex flex-col justify-between`}
+        className={`${karlaFont.variable} antialiased min-h-screen flex flex-col justify-between font-karlaFont`}
       >
-        <Menu op1="Home 🏠" op2="Math 📊" op3="Function"/>
-        <main className="flex flex-col items-center">
+        <Menu op1="Home 🏠" op2="Math 📊" op3="Function 📈"/>
+        <main className={`flex flex-col items-center ${karlaFont.variable}`}>
           {children}
         </main>
         <Footer op1="📞" op2="📩"/>

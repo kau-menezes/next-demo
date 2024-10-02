@@ -84,11 +84,15 @@ const Maths: React.FC = () => {
 
     return(
         <>
-            <div className="w-64 max-w-64 flex flex-col items-center gap-8 bg-purple-300 p-8">
-
+            <div className="w-80 max-w-80 flex flex-col items-center gap-8 bg-cyan-800 pt-3">
+                <h3 className="text-medium text-lime-300 font-semibold">Custom Calculator</h3>
                 <div className="flex flex-col">
-                    <label className="text-purple-800 font-semibold" htmlFor="num1Input">First number</label>
-                    <input id="num1Input" className="bg-stone-100 p-1 placeholder:text-stone-400" placeholder="Type..." type="text" value={num1} onChange={ (e) => { setNum1(e.target.value) }}/>
+                    <label className="text-white font-semibold" htmlFor="num1Input">First number</label>
+                    <input id="num1Input" className="border-solid border-2 border-lime-300 bg-inherit p-1 placeholder:text-stone-400" placeholder="Type..." type="text" value={num1} onChange={ (e) => { setNum1(e.target.value) }}/>
+                </div>
+                <div className="flex flex-col">
+                    <label className="text-white font-semibold" htmlFor="num2Input">Second number</label>
+                    <input id="num2Input" className="border-solid border-2 border-lime-300 bg-inherit p-1 placeholder:text-stone-400" placeholder="Type..." type="text" value={num2} onChange={ (e) => { setNum2(e.target.value) }}/>
                 </div>
                 <div className="flex gap-3">
                     <input onClick={ (e:any) => {setOpperation(e.target.value);  handleSum( {a: num1, b: num2, op: opperation} ) } } className="hidden" id="op1" type="radio" name="op" value={1}/>
@@ -103,14 +107,13 @@ const Maths: React.FC = () => {
                     <input onClick={ (e:any) => {setOpperation(e.target.value); handleSum( {a: num1, b: num2, op: opperation} ) } } className="hidden" id="op4" type="radio" name="op" value={4}/>
                     <label htmlFor="op4">➗</label>
                 </div>
-                <div className="flex flex-col">
-                    <label className="text-purple-800 font-semibold" htmlFor="num2Input">Second number</label>
-                    <input id="num2Input" className="bg-stone-100 p-1 placeholder:text-stone-400" placeholder="Type..." type="text" value={num2} onChange={ (e) => { setNum2(e.target.value) }}/>
-                </div>
                 <b>❔</b>
                 {/* <button className="bg-orange-600 text-white font-bold p-1 hover:bg-cyan-600 h-8 w-8 leading-4" onClick={ () =>  handleSum({a: num1, b: num2, op: opperation} )  }>❔</button> */}
                 {/* <b>{resultString}: { !isNaN(result ?? NaN)? result : errMessage }</b> */}
-                <b className="text-purple-800 text-center" >{ !isNaN(result ?? NaN)? result : errMessage }</b>
+                <div className="flex flex-col w-full h-1/3 bg-lime-300 p-3">
+                    <b className="text-cyan-800 text-sm">Result</b>
+                    <b className="text-cyan-800 text-medium" >{ !isNaN(result ?? NaN)? result : errMessage }</b>
+                </div>
 
             </div>
         </>
