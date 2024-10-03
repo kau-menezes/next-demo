@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --white: #e2e2e2;
+  --white: #ffffff;
   --black: #171717;
 }
+
+main {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

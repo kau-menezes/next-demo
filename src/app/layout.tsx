@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer";
 
 
 const karlaFont = Karla({
-  weight: ["200","300", "400", "500", "800"],
+  weight: ["200","300", "400", "500", "600", "700", "800"],
   style: "normal",
   variable: "--karlaFont",
   subsets: ["latin"],

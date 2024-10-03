@@ -15,28 +15,29 @@ interface IPets{
     friends: number,
     mainColor: string,
     subColor: string,
+    textColor: string,
 
 }
 
-export const Card = ({ name, age, breed, pic, friends, mainColor: color, subColor }: IPets) => {
+export const Card = ({ name, age, breed, pic, friends, mainColor: color, subColor, textColor }: IPets) => {
 
     return(
         <>
-        <div className={"flex flex-col items-center w-full bg-gray-200 rounded hover:scale-105 hover:cursor-pointer"}>
-            <Image className=" rounded w-80 h-56 object-cover" src={ pic === "img1" ? img1 : pic === "img2" ? img2 : pic === "img3" ? img3 : img4 } alt={name}/>
-            <p className="font-small text-gray-500">{breed}</p>
-            <p className="text-large font-medium text-gray-800">{name}</p>
+        <div className={"flex flex-col items-center w-[320px] bg-white rounded-[8px] shadow-xl hover:shadow-2xl overflow-hidden hover:scale-105 hover:cursor-pointer transition-transform duration-150"}>
+            <Image className=" w-[320px] h-[224px] object-cover mb-3" src={ pic === "img1" ? img1 : pic === "img2" ? img2 : pic === "img3" ? img3 : img4 } alt={name}/>
+            <p className={`font-small ${textColor} font-semibold`}>{breed}</p>
+            <p className="text-large font-medium text-gray-800 leading-[1]">{name}</p>
             <p className="max-w-60 text-gray-700 my-4">{description}</p>
-            <div className={`flex justify-center gap-1 ${subColor} w-full rounded`}>
-                <div className={` rounded flex flex-col items-center p-2 w-1/3 ${color} `}>
+            <div className={`flex justify-center ${subColor} divide-x-4 w-full rounded border-solid border-t-2 `}>
+                <div className={` flex flex-col items-center p-2 w-1/3 ${color} `}>
                     <b className="text-white text-center">{age}</b>
                     <p className="text-white text-center">years old</p>
                 </div>
-                <div className={` rounded flex flex-col items-center p-2 w-1/3 ${color} `}>
+                <div className={` flex flex-col items-center p-2 w-1/3 ${color} `}>
                     <b className="text-white text-center">4</b>
                     <p className="text-white text-center">Paws</p>
                 </div>
-                <div className={` rounded flex flex-col items-center p-2 w-1/3 ${color} `}>
+                <div className={` flex flex-col items-center p-2 w-1/3 ${color} `}>
                     <b className="text-white text-center">{friends}</b>
                     <p className="text-white text-center">Friends</p>
                 </div>
