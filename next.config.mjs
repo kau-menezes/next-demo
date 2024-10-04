@@ -13,10 +13,31 @@ const nextConfig = {
                 {
                     source: "/reused-function", 
                     destination: "/generalFunction"
+                },
+                {
+                    source: "/fetch-data",
+                    destination: "/fetchPage"
+
+                },
+                {
+                    source: "/fetch-data-axios",
+                    destination: "/axiosPage"
+                },
+                {
+                    source: "/fetch-server-side",
+                    destination: "/server-side-page"
                 }
             ]
         
-    }
+    },
+    images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'rickandmortyapi.com',
+          },
+        ],
+      },
 
 };
 
